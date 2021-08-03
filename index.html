@@ -2,18 +2,77 @@
 layout: default
 published: true
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>The FAQ's</title>
+</head>
+<body>
+  <div class="mytabs">
+    <input type ="radio" id ="tabfree" name ="mytabs" checked="checked">
+    <label for ="tabfree">FAQ #1</label>
+    <div class = "tab">
+      <h2>1. What cable should I use to connect?</h2>
+      <p>MicroUSB, with a trapezoid port at one end and USB at the other</p>
+    </div>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+    <input type ="radio" id ="tabsilver" name = "mytabs">
+    <label for ="tabsilver">FAQ #2</label>
+    <div class = "tab">
+      <h2>2. Will the connection work if it’s connected through a USB dongle?</h2>
+      <p>Yes, it wil</p>
+    </div>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <input type="radio" id="tabgold" name="mytabs">
+    <label for="tabgold">FAQ #3</label>
+    <div class="tab">
+      <h2>3. My ESP board is heating, is that normal?</h2>
+      <p>As long as the heat is not excessive, yes it is normal</p>
+    </div>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+  </div>
+</body>
+</html>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+<style>
+  body {
+    background: rgb(187, 139, 139);
+    font-family: 'Ariel', sans-serif;
+}
+.mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+}.mytabs input[type="radio"] {
+    display: none;
+}
+.mytabs label {
+    padding: 25px;
+    background: #ad7676;
+    font-weight: bold;
+}
+
+.mytabs .tab {
+    width: 100%;
+    padding: 20px;
+    background: rgb(255, 213, 213);
+    order: 1;
+    display: none;
+}
+.mytabs .tab h2 {
+    font-size: 3em;
+}
+
+.mytabs input[type='radio']:checked + label + .tab {
+    display: block;
+}
+
+.mytabs input[type="radio"]:checked + label {
+    background: rgb(255, 213, 213);
+}
+</style>
