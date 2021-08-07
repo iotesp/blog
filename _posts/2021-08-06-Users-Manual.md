@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 1. Take out the product
 2. To set up the reminder go to iCloudChip
