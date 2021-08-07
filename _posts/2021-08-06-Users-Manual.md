@@ -1,6 +1,8 @@
 ---
 published: true
 ---
+# To set up the LEd controlling
+
 1. Take out the product
 2. To set up the reminder go to iCloudChip
 3. Then make an account
